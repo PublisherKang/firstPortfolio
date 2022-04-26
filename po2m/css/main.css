@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+#wrap{
+    width: 100%;
+    min-width: 320px;
+}
+
+/* ===========================헤더 영역 */
+#header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.logo{
+    width: 150px;
+    order: 2;
+}
+.logo a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-indent: -9999px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: auto 24px;
+    background-position: center;
+}
+
+/* 메뉴버튼, 돋보기 버튼 공통값 */
+#header>button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+
+/* 메뉴 버튼 */
+.m-menu{
+    order: 1;
+    padding: 0 13px;
+}
+.m-menu span{
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #000;
+    margin: 6px 0;
+}
+
+.m-menu::after,
+.m-menu::before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #000;
+
+}
+
+/* 검색 버튼 */
+.m-search{
+    order: 3;
+}
+
+.m-search span{
+    display: block;
+    line-height: 50px;
+    background: url(../images/icons8-search.svg) no-repeat center/auto 34px;
+}
+
+/* ========================메인슬라이더 영역 */
+
+#mainSlider{
+    position: relative;
+}
+#mainSlider img{
+    width: 100%;
+    height: auto;
+}
+#mainSlider .title{
+    font-size: 5.625vw;
+    font-weight: 300;
+    line-height: 1.3em;
+    color: #fff;
+    position: absolute;
+    top: 3.75%;
+    left: 2.65625%;
+}
+#mainSlider .title strong{}
+#mainSlider ul{
+    position: absolute;
+    left: 28.5px;
+    bottom: 24.5px;
+    justify-content: space-between;
+}
+#mainSlider ul li{
+    float: left;
+    margin-right: 5px;
+}
+#mainSlider ul li a{
+    display: block;
+    width: 18.5px;
+    height: 5px;
+    text-indent: -9999px;
+    background: #fff;
+}
+#mainSlider .on a{
+    display: block;
+    height: 5px;
+    background: #f00;
+}
+
+/* ========================컨테이너 영역 */
+
+#container{
+    border-bottom: 1px solid #bbb;
+}
+
+/*--- 컨테이너 1 영역 --- */
+
+.cont1{
+    width: 100%;
+}
+
+/* 컨테이너 1 공통값 */
+
+.cont1>div{
+    color: #fff;
+    padding: 3.28125% 0 3.59375% 7.34375%;
+}
+
+.cont1>div:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.cont1>div h3{
+    font-size: 6.25vw;
+    line-height: 1em;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+.cont1>div p{
+    font-size: 4.375vw;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+.cont1>div .more{
+    display: block;
+    width: 55px;
+    height: 23.5px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+    border: 1px solid #fff;
+    float: right;
+    margin-right: 9%;
+    padding-right: 25px;
+    position: relative;
+}
+
+/* more > 화살표 공통값 */
+.cont1>div .more::after,
+.cont1>div .more::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+}
+
+/* more > 화살표 개별값 */
+.cont1>div .more::after{
+    transform: rotate(-35deg);
+    bottom: 8px;
+    right: 14px;
+}
+.cont1>div .more::before{
+    transform: rotate(35deg);
+    top: 9px;
+    right: 14px;
+}
+
+.cont1 .intro{
+    background: #0c4da2;
+}
+.cont1 .devl{
+    background: #0483ba;
+}
+.cont1 .info{
+    background: #ce1417;
+}
+
+/*--- 컨테이너 2 영역 --- */
+
+.cont2{
+    margin: 0 15px;
+}
+
+/* 컨테이너 h2 공통값 */
+#container h2{
+    font-size: 8.125vw;
+    line-height: 1em;
+    margin: 7.8125% 0;
+}
+
+/* 컨테이너 2 공통값 */
+
+.cont2 ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cont2 ul li{
+    width: 48%;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.cont2 li .photo{
+    width: 100%;
+    height: 0;
+    padding: 50% 0;
+    overflow: hidden;
+}
+.cont2 li .photo img{
+    width: 100%;
+    height: auto;
+    transform: translateY(-55%)
+}
+.cont2 li .name{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: #0c4da2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*--- 컨테이너 3 영역 --- */
+
+.cont3{
+    margin: 0 15px;
+}
+.cont3 ul{
+    width: 100%;
+}
+.cont3 li{
+    width: 100%;
+    border: 1px solid #bbb;
+    margin-bottom: 10px;
+}
+.cont3 li .photo{
+    width: 35.46875%;
+    float: left;
+}
+.cont3 li .photo img{
+    width: 100%;
+    height: auto;
+}
+
+.cont3 li .info{
+    width: 58.53125%;
+    /* background: #f03; */
+    float: left;
+    padding: 3.7% 3%;
+
+}
+.cont3 li .info .tit{
+    font-size: 5.625vw;
+    font-weight: 700;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+}
+.cont3 li .info .subTit{
+    font-size: 4.375vw;
+    line-height: 1em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.cont3 li .info .explan{
+    font-size: 3.75vw;
+    line-height: 1.2em;
+    font-weight: 300;
+}
+
+/*--- 컨테이너 4 영역 --- */
+
+.cont4{
+    margin: 0 15px;
+}
+.cont4 .news{
+    position: relative;
+
+}
+.cont4 .news .photo{
+    background: #000;
+}
+.cont4 .news .photo img{
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+.cont4 .news dl{
+    color: #fff;
+    position: absolute;
+    bottom: 9px;
+    left: 8px;
+}
+.cont4 .news dl dt{
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 2em;
+}
+.cont4 .news dl dd{
+    font-size: 4.0625vw;
+    line-height: 1.3em;
+    font-weight: 300;
+}
+
+/*--- 컨테이너 5 영역 --- */
+
+.cont5{
+    background: #0c4da2;
+    position: relative;
+    margin: 7.8125% 0;
+}
+
+.cont5 h4{
+    font-size: 7.5vw;
+    line-height: 2.75em;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 7.8125%;
+}
+
+.cont5 span{
+    display: block;
+    width: 7.1875%;
+    height: 7.1875%;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-200%);
+}
+.cont5 span img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* ========================푸터 영역 */
+
+#footer{
+    color: #888;
+    font-size: 12px;
+    line-height: 1em;
+    text-align: center;
+}
+
+.flogo{
+    width: 130px;
+    margin: 20px auto;
+}
+.flogo img{
+    width: 100%;
+    height: auto;
+}
+
+.fmenu{
+    font-size: 12px;
+    line-height: 1em;
+}
+
+.fmenu ul li{
+    display: inline-block;
+    margin: 0 10px 15px;
+}
+
+.fmenu li a{
+    color: #888;
+}
+.finfo address{
+    margin-bottom: 15px;
+}
+.copy{
+    margin: 20px;
+}

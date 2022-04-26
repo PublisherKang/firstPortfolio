@@ -1,0 +1,859 @@
+@charset "utf-8";
+
+#wrap{}
+
+/*=====헤더 영역=====*/
+#header{
+    width: 100%;
+    height: 125px;
+    border-bottom: 1px solid #bbb;
+}
+#headerIn{
+    width: 1200px;
+    height: 125px;
+    margin: 0 auto;
+    position: relative;
+/*    background: #ff87eb;*/
+}
+
+.logo{
+    padding-top: 27px;
+    text-align: center;
+}
+
+.gnb{
+    width: 1100px;
+    margin: 19px auto 0;
+}
+.gnb h2{
+    display: none;
+}
+.gnb li{
+    float: left;
+    width: 180px;
+    text-align: center;
+    margin-right: 50px;
+    position: relative;
+}
+.gnb li:last-child{
+    margin-right: 0;
+}
+.gnb li a{
+    display: block;
+/*    background: #e8ff9b;*/
+    font-size: 18px;
+    line-height: 18px;
+    color: #333;
+    padding: 10px 0; /*height = 10+10+18 = 38*/
+}
+.gnb li:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #00ada1;
+    opacity: 0;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+
+/*--- gnb 마우스 하버시 ---*/
+.gnb li:hover a{
+    color: #00ada1;
+}
+.gnb li:hover:after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.utill{
+    position: absolute;
+    top: 22px;
+    right: 140px;
+}
+.utill li{
+    float: left;
+    position: relative;
+    margin-right: 30px;
+/*    background: #ffb4c3;*/
+}
+.utill li:last-child{
+    margin-right: 0;
+}
+.utill li:after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #333;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+.utill li:first-child:after{
+    display: none;
+}
+.utill li a{
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    color: #333;
+    text-align: center;
+}
+.utill li:hover a{
+    color: #00ada1;
+}
+
+.sns{
+    position: absolute;
+    top: 13px;
+    right: 16px;
+}
+.sns li{
+    float: left;
+    margin-left: 10px;
+}
+.sns li:first-child{
+    margin-left: 0;
+}
+.sns li a{
+    position: relative;
+}
+/*--- sns 공통값 ---*/
+.sns li a span{
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.sns li a i{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    text-indent: -9999px;
+    background-image: url(../images/icon_next.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+/*--- sns 개별값 ---*/
+.sns li:nth-child(1) a span{
+    background-image: url(../images/icons-facebook.svg);
+}
+.sns li:nth-child(2) a span{
+    background-image: url(../images/icons-instagram.svg);
+}
+.sns li:nth-child(3) a span{
+    background-image: url(../images/icons-youtube-squared.svg);
+}
+
+/*--- sns 마우스 하버시 ---*/
+
+.sns li:hover a span{
+    transform: scale(0);
+}
+.sns li:hover a i{
+    transform: scale(1);
+}
+
+.search{
+    width: 180px;
+    position: absolute;
+    top: 55px;
+    right: 58px;
+}
+.search input{
+    width: 148px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 4px 24px 4px 4px;
+    font-size: 12px;
+    line-height: 12px;
+    outline: none;
+    background: url(../images/icon_search.png) no-repeat 152px center/auto 16px;
+} 
+.search .submit{
+    display: block;
+    width: 26px;
+    height: 26px;
+    padding-left: 4px;
+/*    background: #fe0;*/
+    text-indent: -9999px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.shop{
+    position: absolute;
+    top: 50px;
+    right: 16px;
+}
+.shop .cart{
+    display: block;
+    width: 33px;
+    height: 33px;
+    text-indent: -9999px;
+    background: url(../images/icon_cart.png) no-repeat center/auto 26px;
+}
+.shop i{
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-indent: -9999px;
+    background: url(../images/icon_heart.png) no-repeat center/auto 15px;
+    position: absolute;
+    top: 2px;
+    left: 12px;
+    transform: scale(0);
+    transition: all 0.2s;
+}
+
+/*--- shop 하버시 하트아이콘 ---*/
+.shop:hover i{
+    transform: scale(1);
+}
+
+/*===== 메인 슬라이더 영역 =====*/
+
+#mainSlider{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 100px;
+}
+
+#msIn{
+    width: 1200px;
+    height: 600px;
+    background: url(../images/mainslider_bg.jpg) no-repeat center;
+    margin: 0 auto;
+    position: relative;
+}
+
+#msIn .title{
+    width: 505px;
+    text-align: center;
+    position: absolute;
+    top: 66px;
+    left: 75px;
+}
+#msIn .title .subTit{
+    font-size: 30px;
+    line-height: 30px;
+    color: #00ada1;
+    margin-bottom: 21px;
+}
+#msIn .title .tit{
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #00ada1;
+}
+#msIn .title .tit span:nth-child(2){
+    display: block;
+    font-family: 'Noto Serif KR', serif;
+    color: #f76260;
+    margin-top: 10px;
+}
+#msIn .pager{
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#msIn .pager li{
+    display: inline-block;
+    margin-right: 10px;
+}
+#msIn .pager li:last-child{
+    margin-right: 0;
+}
+/*--- 페이저 공통값 ---*/
+#msIn .pager li a{
+    display: block;
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #bbb;
+    border-radius: 12px;
+    transition: all 0.35s;
+}
+#msIn .pager .on a{
+    background: #f76260;
+}
+
+/*--- 페이저 마우스 하버시 ---*/
+#msIn .pager li:hover a{
+    transform: scale(1.75);
+    background: #f76260;
+}
+
+#msIn .btn{}
+
+#msIn .btn .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: rotate(-45deg);
+}
+#msIn .btn .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: rotate(135deg);
+}
+
+/*--- 버튼 공통값 ---*/
+#msIn .btn a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    box-shadow: 7px 7px 6px rgba(0, 173, 161, 0.5) inset;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+/*--- 버튼 마우스 하버시 ---*/
+#mainSlider:hover .btn a{
+    opacity: 1;
+}
+
+#msIn .more{
+    position: absolute;
+    bottom: 40px;
+    left: 218px;
+}
+
+#msIn .more a{
+    display: block;
+    width: 208px;
+    height: 37px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 37px;
+    color: #00ada1;
+    border: 1px solid #00ada1;
+    transition: all 0.3s;
+}
+
+/*--- 더보기 하버시--- */
+#msIn .more:hover a{
+    box-shadow: 0 0 30px rgba(0, 173, 161, 0.5) inset;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+/*===== 컨테이너 본문 영역 =====*/
+#container{
+    padding-bottom: 150px;
+    border-bottom: 1px solid #333;
+}
+
+#container .event{}
+/* === 컨테이너 공통값 === */
+#container>section .inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+#container .inner .title{
+    color: #00ada1;
+    margin-bottom: 70px;
+}
+#container .inner .title h3{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+#container .inner .title .subtit{
+    font-size: 36px;
+    line-height: 36px;
+}
+
+/*--- 컨테이너1 영역 ------------------------*/
+/*--- event 영역---*/
+.event .inner .eventPd{
+    width: 1200px;
+}
+.event .inner ul{
+    width: 1162px;
+    margin: 0 auto 100px;
+}
+.event .inner .eventPd li{
+    width: 350px;
+    float: left;
+    margin-right: 56px;
+    position: relative;
+}
+.event .inner .eventPd li:last-child{
+    margin-right: 0;
+}
+.event .inner .eventPd .photo{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.event .inner .eventPd .photo .image{}
+.event .inner .eventPd .photo .iconUp{
+    display: block;
+    width: 90px;
+    height: 72px;
+    text-indent: -9999px;
+    background: url(../images/img_up.png) no-repeat;
+    position: absolute;
+    top: 42px;
+    right: 40px;
+    animation: pd 1s linear infinite;
+}
+
+.event .inner .eventPd .text{
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.event .inner .eventPd .price{
+    text-align: center;
+}
+.event .inner .eventPd .price .cost{
+    color: #777;
+    text-decoration:line-through;
+    font-size: 16px;
+}
+.event .inner .eventPd .price .sale{
+    color: #f00;
+    font-size: 18px;
+}
+
+.event .inner .eventPd li:nth-child(3) .sale{
+    color: #222;
+}
+.eventPd li:before{
+    content: "";
+    display: block;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #00ada1;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 0.2s;
+}
+.eventPd li:hover:before{
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+@keyframes pd{
+    0%{top: 0;}
+    50%{top: 15px;}
+    100%{top: 0px;}
+}
+
+/*--- 컨테이너2 영역 ------------------------*/
+/*--- video 영역 ---*/
+
+.movie{
+    margin-bottom: 100px;
+}
+
+.movie h3{
+    display: none;
+}
+.movie .inner .youtube{
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;    
+}
+.movie .youtube iframe{
+    width: 900px;
+    height: 600px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+
+/*--- 컨테이너3 영역 ------------------------*/
+
+.newPd{
+    width: 100%;
+    margin-bottom: 190px;
+}
+
+.newPd .product{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.newPd .product ul{
+    width: 1162px;
+    margin: 0 auto;
+    position: relative;
+}
+.newPd .product li{
+    width: 350px;
+    float: left;
+    margin-right: 56px;
+    position: relative;
+}
+.newPd .product li:nth-child(1) .text, .newPd .product li:nth-child(1) .price{
+    text-decoration: line-through;
+}
+.newPd .product li:nth-child(3){
+    margin-right: 0;
+}
+
+.newPd .photo{}
+
+.newPd .text{
+    width: 310px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    position: relative;
+}
+.newPd .text .name{
+    margin-bottom: 5px;
+}
+.newPd .text .subName{}
+.newPd .text .soldOut{
+    display: block;
+    font-size: 14px;
+    width: 43px;
+    height: 22px;
+    background: #f76260;
+    text-align: center;
+    color: #fff;
+    line-height: 22px;
+    border-radius: 6px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+.newPd .text .soldOut:after{
+    content: "";
+    display: block;
+    border: 8px solid;
+    border-color: #f76260 transparent transparent transparent ;
+    position: absolute;
+    bottom: -13px;
+    left: 3px;
+} /*품절 삼각형*/
+
+
+.newPd .price{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.newPd .over{}
+.newPd .over .icons{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -70px;
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: all 0.5s;
+}
+
+.newPd .product .btnL{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/icon_arrow_left.png) no-repeat center;
+    transform: translateY(-50%);
+    border: none;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    cursor: pointer;
+}
+.newPd .product .btnR{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/icon_arrow_left.png) no-repeat center;
+    border: none;
+    transform: rotate(180deg) translateY(50%);
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    cursor: pointer;
+}
+/*--- 마우스 하버시 ---*/
+.newPd .product li:hover .photo{
+    opacity: 0.5;
+}
+.newPd .product li:hover .over{
+    opacity: 1;
+}
+.newPd li:hover .icons{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.newPd .over .icons button{
+    display: inline-block;
+    border: none; 
+    width: 60px;
+    height: 60px;
+    background: #f2d65f;
+    border-radius: 30px;
+    box-shadow: 0 0 8px rgba(38, 38, 38, 0.8);
+    margin-left: 20px;
+    text-align: center;
+    outline: none;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.newPd .over .icons button img{
+    width: 30px;
+    height: auto;
+}
+.newPd .over .icons button:first-child{
+    margin-left: 0;
+}
+
+/*--- 버튼 하버시 ---*/
+.newPd .over .icons button:hover{
+    background: #f76260;
+}
+.newPd .product:hover button{
+    opacity: 1;
+}
+
+/*===== 컨테이너4 영역 =====*/
+
+.story{
+    width: 1200px;
+    height: 668px;
+    margin: 0 auto;
+    background: url(../images/cont4_bg.jpg) no-repeat center;
+}
+
+.story .title{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #00ada1;
+    text-align: center;
+    transform: translateY(-90px);
+}
+
+.story .cLogo{
+    margin: 20px 0 38px 220px;
+}
+.story .txt{
+    font-size: 16px;
+    line-height: 12px;
+    margin-left: 220px;
+}
+.story .txt p{
+    margin-bottom: 15px;
+}
+.story .txt p:nth-child(3){
+    margin-bottom: 36px;
+}
+.story .txt strong{
+    font-weight: 800;
+}
+
+/*===== 컨테이너5 영역 =====*/
+
+.review{
+    margin-top: 150px;
+}
+
+.review .title{
+    font-size: 36px;
+    line-height: 36px;
+}
+.review ul{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.review li{
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.review li:nth-child(4){
+    margin-right: 0;
+}
+.review li .photo{
+    width: 280px;
+    height: 280px;
+    transition: all 1s;
+}
+.review li .photo img{
+    width: 100%;
+    height: auto;
+}
+
+.review li .over{
+    width: 240px;
+    height: 240px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+.review li .photo:before{
+    content: "";
+    display: block;
+    width: 280px;
+    height: 280px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.review li .over .icon{
+    display: block;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/icon_insta_review.png) no-repeat center;
+    margin-bottom: 130px;
+}
+.review li .over p{
+    opacity: 0;
+    transform: translateY(100px);
+}
+.review li .over .score{
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: all 0.8s 0.2s;
+}
+.review li .over .info{
+    margin-bottom: 5px;
+    transition: all 0.8s 0.4s;
+}
+
+.review li .over .name{
+    text-align: center;
+    transition: all 0.8s 0.6s;
+}
+
+/*--- 마우스 하버시 ---*/
+.review li:hover .photo{
+    transform: scale(1.1);
+}
+.review li:hover .photo:before{
+    opacity: 1;
+}
+.review li:hover p{
+    opacity: 1;
+    transform: translateY(0);
+}
+.review:hover button{
+    opacity: 1;
+}
+
+/*===== 푸터 영역 =====*/
+#footer{
+    width: 100%;
+    margin-bottom: 50px;
+}
+#footerIn{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flogo{
+    padding-top: 55px;
+}
+.flogo:after{
+    content: "";
+    display: block;
+    width: 900px;
+    height: 1px;
+    background: #444;
+    margin: 12px 0 35px 0;
+}
+.fmenu{
+    position: absolute;
+    top: 75px;
+    left: 226px;
+}
+.fmenu li{
+    display: inline-block;
+    margin-right: 50px;
+}
+.fmenu li a{
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.finfo{}
+.finfo p{
+    font-size: 14px;
+    line-height: 14px;
+}
+.finfo p:nth-child(1) span{
+    margin-right: 45px;
+}
+.finfo p:nth-child(2) span{
+    display: inline-block;
+    margin: 20px 28px 20px 0;
+}
+
+.family{
+    width: 150px;
+}
+.family select{
+    padding: 3px 0 3px 10px;
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+.top{
+    text-align: center;
+}
+.top a{
+    display: block;
+    width: 46px;
+    height: 1px;
+    background: url(../images/footer_topbtn.png) no-repeat;
+    padding-top: 45px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    animation: top 1s linear infinite;
+}
+
+@keyframes top{
+    0%{top: 50px}
+    50%{top: 40px}
+    100%{top: 50px}
+}

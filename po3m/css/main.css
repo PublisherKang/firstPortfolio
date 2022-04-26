@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+#wrap{
+    width: 100%;
+    min-width: 320px;
+}
+
+/* ==================== 헤더 본문영역 */
+
+#header{
+    width: 100%;
+    height: 50px;
+    /* background: rgb(252, 195, 248); */
+    position: relative;
+}
+
+.logo{
+    width: 190px;
+    height: 30px;
+    /* background: rgb(135, 233, 233); */
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.logo a{
+    display: block;
+    width: 190px;
+    height: 30px;
+    text-indent: -9999px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 30px;
+}
+
+.btnMenu{
+    display: block;
+    width: 24px;
+    height: 21px;
+    /* background: #f03; */
+    padding: 14.5px 13px;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.btnMenu span{
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #222;
+    margin: 6px 0;
+}
+
+.btnMenu:after, .btnMenu:before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #222;
+}
+
+.btnSearch{
+    display: block;
+    width: 50px;
+    height: 50px;
+    /* background: #923; */
+    background-image: url(../images/icons-search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ==================== 헤더 본문영역 */
+#mainSlider{
+    width: 100%;
+    height: auto;
+    background: #e1f1e4;
+    box-shadow: 0 0 100px 0px rgba(173, 255, 188, 0.7) inset;
+    position: relative;
+    margin-bottom: 50px;
+}
+#mainSlider .simg{
+    text-align: center;
+    padding-bottom: 30px;
+}
+#mainSlider img{
+    width: 70%;
+    height: auto;
+}
+
+#mainSlider .title{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+#mainSlider .title .subTit{
+    font-size: 4.6875vw;
+    line-height: 1.2em;
+    color: #00ada1;
+    margin-bottom: 5px;
+} /* (15/320)x100 */
+#mainSlider .title .tit1{
+    font-size: 6.25vw;
+    line-height: 1.2em;
+    color: #00ada1;
+    font-weight: 700;
+}
+#mainSlider .title .tit2{
+    font-size: 6.25vw;
+    line-height: 1.2em;
+    font-family: 'Noto Serif KR', serif;
+    color: #f76260;
+    font-weight: 700;
+}
+
+#mainSlider .pager{
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#mainSlider .pager ul{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#mainSlider .pager li{
+    
+}
+#mainSlider .pager li a{
+    display: block;
+    width: 12px;
+    height: 12px;
+    text-indent: -9999px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+}
+#mainSlider .pager .on a{
+    background: #f76260;
+}
+
+#mainSlider .btn a{
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-top: 2px solid #bbb;
+    border-left: 2px solid #bbb;
+    position: absolute;
+    bottom: 17px;
+}
+
+#mainSlider .btn .prev{
+    transform: rotate(-45deg);
+    left: 28%;
+}
+
+#mainSlider .btn .next{
+    transform: rotate(135deg);
+    right: 28%;
+}
+
+/* ==================== 컨테이너 본문영역 */
+
+/* --- 이벤트 영역 --- */
+#container{
+    border-bottom: 1px solid #bbb;
+}
+
+/* 컨테이너 공통값 */
+#container>section>p{
+    color: #00ada1;
+}
+
+#container .title{
+    font-size: 4.6875vw;
+    line-height: 1em;
+    margin-bottom: 8px;
+}
+#container .subTit{
+    font-size: 7.5vw;
+    line-height: 1em;;
+    margin-bottom: 10px;
+}
+
+.event{
+    margin: 0 6.25% 50px;
+    position: relative;
+
+}
+.event .product{
+    text-align: center;
+    position: relative;
+}
+.event .product .photo::after{
+    content: "";
+    display: block;
+    width: 21.125%;
+    height: 17.5%;
+    background: url(../images/img_up.png) no-repeat center/cover;
+    position: absolute;
+    top: 15.625%;
+    right: 12.875%;
+    animation: top 1s linear infinite;
+}
+.event .product .photo{
+    width: 80%;
+    margin: 0 auto;
+}
+.event .product .photo img{
+    width: 100%;
+    height: auto;
+}
+.event .product .name{
+    font-size: 5vw;
+    line-height: 1.8em;
+}
+.event .product .price span:nth-child(1){
+    font-size: 4.6875vw;
+    line-height: 1em;
+    text-decoration: line-through;
+}
+.event .product .price span:nth-child(2){
+    font-size: 5vw;
+    line-height: 1em;
+    color: #f00;
+}
+
+.event .btn a{
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid #bbb;
+    border-left: 2px solid #bbb;
+    position: absolute;
+    top: 50%;
+}
+.event .prev{
+    transform: rotate(-45deg);
+    left: 0;
+    
+}
+.event .next{
+    transform: rotate(135deg);
+    right: 0;
+
+}
+@keyframes top{
+    0%{top: 10%;}
+    50%{top: 15%;}
+    100%{top: 10%;}
+}
+/* --- movie 영역 --- */
+.movie{
+    margin-bottom: 50px;
+}
+.movie iframe{
+    width: 100%;
+    height: 320px;
+    border: 0;
+}
+
+/* --- 신상품 영역 --- */
+.newProduct{
+    margin: 0 6.25% 50px;
+}
+
+.newProduct li{
+    width: 50%;
+    float: left;
+}
+.newProduct li .photo img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.newProduct li .text{
+    text-align: center;
+}
+.newProduct li .text .name{
+    font-size: 4.375vw;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+.newProduct li .text .price{
+    font-size: 4.625vw;
+    font-weight: bold;
+}
+
+/* --- 스토리 영역 ---  */
+.story{
+    margin-bottom: 50px;;
+    position: relative
+}
+.story .storyImg img{
+    width: 100%;
+    height: auto;
+}
+.story .sLogo img{
+    width: auto;
+    height: 18%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.story .sTxt{
+    text-align: center;
+    font-size: 4vw;
+    line-height: 1.2em;
+    position: absolute;
+    top: 32%;
+    left: 14%;
+}
+
+/* --- 리뷰 영역 --- */
+.review{
+    margin: 0 6.25% 50px;
+}
+.review ul{}
+.review ul li{
+    width: 50%;
+    float: left;
+}
+
+.review ul li .photo{
+    margin: 5%;
+}
+.review ul li .photo img{
+    width: 100%;
+    height: auto;
+}
+.review ul li .over{
+    display: none;
+}
+
+/* ==================== 푸터 영역 */
+#footer{
+    margin: 20px 6.25% 0;
+    text-align: center;
+}
+.flogo{
+    margin-bottom: 10px;
+}
+.flogo img{
+    width: auto;
+    height: 19px;
+}
+.fmenu{
+    font-size: 3.75vw;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+.fmenu ul{}
+.fmenu ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.fmenu ul li:nth-child(3){
+    margin-right: 0;
+}
+.fmenu ul li:nth-child(4){
+    margin-right: 0;
+}
+.fmenu ul li a{
+    color: #777;
+}
+
+.finfo{
+    font-size: 3.2vw;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+.finfo p:first-child{
+    display: inline-block;
+}
+.finfo p:nth-child(1) span:first-child{
+    margin-right: 10px;
+}
+.finfo p:nth-child(1) span:last-child{
+    display: block;
+}
+.finfo p:nth-child(2) span{
+    display: block;
+}
+
+.family{
+    display: none;
+}

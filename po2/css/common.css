@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+
+/*==========헤더 영역==========*/
+#header{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #aaa;
+    z-index: 300;
+    
+}
+#headerIn{
+    width: 980px;
+    height: 103px;
+    margin: 0 auto;
+/*    background: #a8fff2;*/
+    position: relative;
+}
+
+.logo{
+    padding-top: 30px;
+}
+
+.gnb{
+    position: absolute;
+    right: 0;
+    top: 52px;
+}
+.gnb h2{
+    display: none;
+}
+.gnb li{
+    float: left;
+    position: relative;
+    width: 130px;
+    text-align: center;
+}
+.gnb li .navi{
+    color: #222;
+    transition: border-bottom 0.1s;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    position: relative;}
+        
+/*    background: #d396d8;*/
+.gnb li:hover .navi{
+    color: #0c4da2;
+}
+
+
+
+/*.gnb li:hover .navi{
+    color: #0c4da2;
+    border-bottom: 3px solid #0c4da2;
+}*/
+
+.gnb li .sub{
+    display: none;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    background: #fff;
+    width: 130px;
+    height: 250px;
+/*    background: #0ef;*/
+
+/*    background: #eba6a6*/
+}
+.gnb:hover li .sub{
+    display: block;
+}
+.gnb li .sub ul{
+    padding-top: 30px;
+}
+.gnb li .sub li{
+    float: none;
+}
+.gnb li .sub li a{
+    display: block;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.gnb li .navi span{
+    display: block;
+    width: 100%;
+    height: 0px;
+    background: #0c4da2;
+    position: absolute;
+    left: 0;
+    bottom: -5px;;
+    opacity: 0;
+    z-index: 200;
+    transition: all 0.3s;
+}
+.gnb li:hover .navi span{
+    height: 4px;
+    opacity: 1;
+}
+.gnb li .sub:hover li a{}
+
+.gnb li .sub li:hover a{
+    background: #0c4da2;
+    color: #fff;
+}
+
+.utill{
+    position: absolute;
+    top: 22px;
+    right: 53px;
+}
+.utill li{
+    float: left;
+    border-left: 1px solid #666;
+    line-height: 12px;
+    padding: 0 8px;
+}
+.utill li:hover a{
+    color: #0c4da2;
+    font-weight: bold;
+}
+.utill li:first-child{
+    border-left: none;
+}
+.utill li a{
+    color: #666;
+}
+
+.lang{
+    width: 46px;
+    height: 17px;
+    position: absolute;
+    top: 19px;
+    right: 0;
+}
+.lang a{
+    display: block;
+    background: url(../images/lang.jpg) no-repeat;
+    text-indent: -9999px;
+}
+
+
+/*========== 푸터 영역 ==========*/
+
+#footer{
+    width: 100%;
+    height: 150px;
+    border-top: 1px solid #aaa;
+
+}
+#footerIn{
+    width: 980px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flogo{
+    position: absolute;
+    top: 32px;
+    left: 0;
+}
+.finner{
+    margin-left: 160px;
+}
+.finner .fmenu{
+    padding-top: 30px;
+}
+.finner .fmenu li{
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 17px;
+}
+.finner .fmenu li:last-child{
+    margin-right: 0;
+}
+.finner .fmenu li a{
+    color: #666;
+}
+.finner .fmenu li:hover a{
+    color: #0c4da2;
+    font-weight: bold;
+}
+.finner .finfo{
+    color: #666;
+    margin-bottom: 25px;
+}
+.finner .finfo p{
+    float: left;
+    border-right: 1px solid #666;
+    line-height: 12px;
+    padding: 0 5px;
+}
+.finner .finfo p:nth-child(1){
+    padding-left: 0;
+}
+.finner .finfo p:nth-child(2){
+    border-right: none;
+    padding-right: 0;
+}
+.finner .finfo p a{
+    color: #666;
+    font-weight: 500
+}
+.finner .finfo p a:hover{
+    color: #0c4da2; 
+    font-weight: bold;
+}
+.finner .finfo .map{
+    border-right: none;
+    margin-left: 22px;
+}
+
+.copy{
+    color: #666;
+}
+.fsns{
+    position: absolute;
+    right: 160px;
+    bottom: 30px;
+}
+.fsns li{
+    float: left;
+    margin-left: 20px;
+}
+
+.family{
+    width: 121px;
+    position: absolute;
+    top: 33px;
+    right: 20px;
+}
+.family .btn{
+    display: block;
+    border: 1px solid #888;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 11px;
+    background: url(../images/family_ico.jpg) no-repeat 95px center;
+}
+
+.family .list{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 21px;
+    left: 0;
+}
+.family .list li{
+    border: 1px solid #888;
+    border-top: none;
+}
+.family .list li a{
+    display: block;
+    padding-left: 11px;
+    height: 20px;
+    line-height: 20px;
+}
+.family .list li:hover a{
+    color: #0c4da2;
+    font-weight: 500;
+}
+.family:hover .list{
+    display: block;
+}

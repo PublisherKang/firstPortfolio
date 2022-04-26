@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+#subwrap{
+    padding-top: 123px;
+}
+
+/*========== 서브 네비게이션 ==========*/
+.subNavi{
+    width: 100%;
+    background: #9d9d9d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 103px;
+    border-bottom: 1px solid #c3c3c3;
+    z-index: 200;
+}
+
+.naviIn{
+    width: 980px;
+    margin: 0 auto;
+    height: 20px;
+    position: relative;
+}
+
+.naviIn .n1{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.naviIn .n1 p{
+    float: left;
+    border-left: 1px solid #fff;
+    margin-left: 10px;
+}
+.naviIn .n1 p a{
+    display: block;
+    color: #fff;
+    height: 18px;
+    padding: 1px 0;
+}
+.naviIn .n1 .home{
+    border-left: none;
+}
+.naviIn .n1 .home a{
+    display: block;
+    background: url(../images/sub1/home_icon.png) no-repeat;
+    padding-left: 22px;
+    color: #fff;
+}
+.naviIn .n1 .now a{
+    padding-left: 10px;
+}
+.naviIn .n1 p:hover a{
+    color: #0c4da2;m
+    font-weight: bold;
+}
+
+/*========== 컨테이너 본문영역==========*/
+
+#subContainer{
+    width: 100%;
+}
+
+/*========== 컨테이너1 영역==========*/
+
+.subCont1{
+    width: 100%;
+    height: 300px;
+    background: url(../images/sub1/bg.jpg) no-repeat 
+        center 0;
+}
+.subCont1 .inner{
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+.subCont1 .inner .subTit{
+    width: 797px;
+    height: 82px;
+    background: rgba(0,0,0,0.5);
+    font-size: 30px;
+    color: #fff;
+    line-height: 82px;
+    border: 1px solid #fff;
+    text-align: center;
+    position: absolute;
+    top: 107px;
+    left: 91px;
+}
+.subCont1 .inner .subTit span{
+    font-weight: 600;
+}
+
+
+/*=== 컨테이너2,3 타이틀 공통영역===*/
+.inner h3{
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #333;
+}
+.inner .subtit{
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #555;
+}
+.inner .subtit strong{
+    font-weight: bold;
+}
+
+/*========== 컨테이너2 영역==========*/
+
+.subCont2{
+    margin: 100px 0;
+}
+.subCont2 .inner{
+    width: 980px;
+    margin: 0 auto;
+}
+
+.subCont2 .info{
+    margin-top: 100px;
+}
+.subCont2 .info .name{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.subCont2 .info .nameTit{
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    margin: 0 25px;
+    color: #555;
+}
+.subCont2 .info .name span{
+    display: inline-block;
+    width: 380px;
+    height: 1px;
+    background: #555;
+    margin-bottom: 9px;
+}
+
+.subCont2 .info .name .lineL{}
+.subCont2 .info .name .lineR{}
+
+.subCont2 .info .menu{}
+.subCont2 .info .menu li{
+    width: 180px;
+    height: 180px;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+.subCont2 .info .menu li:last-child{
+    margin-right: 0;
+}
+
+.subCont2 .info .menu li .photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 180px;
+    overflow: hidden;
+}
+.subCont2 .info .menu li .bgbox{
+    display: block;
+    width: 180px;
+    height: 180px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 180px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.subCont2 .info .menu li .box{
+    width: 116px;
+    height: 58px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 61px;
+    left: 50%;
+    margin-left: -58px;
+    opacity: 1;
+    transition: all 1s 0.2s;
+}
+.subCont2 .info .menu li .box .txt{
+    font-size: 20px;
+    line-height: 20px;
+    padding: 6px 0;
+}
+.subCont2 .info .menu li .box .subtxt{
+    font-size: 16px;
+}
+
+
+/*공통값*/
+.subCont2 .info .menu li .hvCont{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    opacity: 0;
+    font-weight: 300;
+    transition: all 0.5s 0.2s;
+}
+.subCont2 .info .menu li .hvCont strong{
+    color: #7db6ff;
+}
+/*개별값*/
+.subCont2 .info .menu li:nth-child(1) .hvCont{
+    margin-top: 60px;
+}
+.subCont2 .info .menu li:nth-child(2) .hvCont{
+    margin-top: 34px;
+}
+.subCont2 .info .menu li:nth-child(3) .hvCont{
+    margin-top: 42px;
+}
+.subCont2 .info .menu li:nth-child(4) .hvCont{
+    margin-top: 24px;
+}
+.subCont2 .info .menu li:nth-child(5) .hvCont{
+    margin-top: 42px;
+}
+
+/*마우스 하버시*/
+
+.subCont2 .info .menu li:hover .bgbox{
+    opacity: 1;
+}
+.subCont2 .info .menu li:hover .box{
+    opacity: 0;
+}
+.subCont2 .info .menu li:hover .hvCont{
+    opacity: 1;
+}
+
+/*==========컨테이너3 영역=========*/
+
+.subCont3{}
+.subCont3 .inner{
+    width: 980px;
+    margin: 0 auto 90px;
+}
+.subCont3 .inner .ruleBox{
+    margin-top: 50px;
+}
+.subCont3 .inner .ruleBox li{
+    width: 480px;
+    height: 93px;
+    float: left;
+    margin: 0 20px 20px 0;
+    background: #0c4da2;
+}
+.subCont3 .inner .ruleBox li:nth-child(2n){
+    margin-right: 0;    
+}
+.subCont3 .inner .ruleBox li:nth-child(3){
+    background: #04a9b0;
+}
+.subCont3 .inner .ruleBox li:nth-child(4){
+    background: #04a9b0;
+}
+.subCont3 .inner .ruleBox li:nth-child(5){
+    margin-bottom: 0;
+    background: #0483ba;
+}
+.subCont3 .inner .ruleBox li:nth-child(6){
+    margin-bottom: 0;
+    background: #0483ba;
+}
+.subCont3 .ruleBox .rule{
+    width: 454px;
+    height: 74px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    margin-top: 10px;
+    margin-left: 13px;
+    position: relative;
+}
+
+.subCont3 .rule h4{
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 9px;
+    left: 7px;;
+}
+.subCont3 .rule h4 span{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.subCont3 .rule dl{
+    margin-left: 86px;
+}
+.subCont3 .rule dl dt{
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 5px;
+    margin-bottom: 8px;
+}
+.subCont3 .rule dl dd{
+    font-size: 14px;
+    font-weight: 300;
+}
